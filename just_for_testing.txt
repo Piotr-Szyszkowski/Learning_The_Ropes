@@ -3,3 +3,6 @@ Guess I'll just test how to add and handle new, simple files here...
 ...and change this line...
 Batman
 Green Lantern
+Punisher
+Spiderman
+wolverine
