@@ -1,5 +1,24 @@
 
 /*
+******************* Are the numbers in order? ********************************
+*/
+function inAscOrder(arr) {
+  if (arr.length == 1) {
+    return true;
+  }
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > arr[i+1]) {
+      return false;
+    }
+  }
+  return true;
+};
+
+let t1 = [ 2, 5, 7, 8, 10, 10];
+console.log(inAscOrder(t1));
+
+
+/*
 ************************* Find the nth Digit of a Number *********************
 */
 var findDigit = function(num, nth){
