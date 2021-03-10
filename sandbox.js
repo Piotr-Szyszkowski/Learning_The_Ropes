@@ -1,4 +1,77 @@
+/*
+*************************** Powers of 2 ********************
+*/
+function powersOfTwo(n){
+  let arr = [1];
+  for (let i = 1; i <= n; i++) {
+    arr.push(arr[i - 1] * 2);
+  }
+  return arr;
+};
 
+let t1 = 4;
+console.log(powersOfTwo(t1));
+
+
+
+
+
+/*
+**************** Initialize my name *************************
+*/
+function initializeNames(name){
+  let finalArr = [];
+  let nameSplt = name.split(" ");
+  if (nameSplt.length < 3) {
+    return name;
+  } else {
+    finalArr.push(nameSplt[0]);
+    for (let i = 1; i < nameSplt.length - 1; i++) {
+      finalArr.push(nameSplt[i][0] + ".");
+    }
+    finalArr.push(nameSplt[nameSplt.length - 1])
+  };
+  return finalArr.join(" ");
+};
+
+let t1 = 'Alice Betty Catherine Davis'; //'Alice B. C. Davis'
+let t2 = 'Lois Mary Lane';//'Lois M. Lane'
+let t3 = 'Jack Ryan' // 'Jack Ryan'
+let t4 = 'Dimitri'// 'Dimitri'
+//initializeNames(t1);
+console.log(initializeNames(t3));
+
+//***************** Removing Elements ******************************
+
+function removeEveryOther(arr){
+  for (let i = 1; i < arr.length; i++) {
+    console.log(`pass number ${i}, array = ${arr}`);
+    arr.splice(i, 1)
+  }
+  return arr;
+};
+
+let t1 = [1, 2, 1, 2, 1, 2, 1, 2, 1, 2];
+console.log(removeEveryOther(t1));
+
+/*
+********************* Get the Middle Character ***************************
+*/
+function getMiddle(s) {
+  return s.length % 2 === 0 ? s[s.length / 2 -1] + s[s.length / 2]
+  : s[Math.round(s.length / 2 - 1)];
+};
+/*
+function getMiddle(s) {
+  if (s.length % 2 === 0) {
+    return s[s.length / 2 -1] + s[s.length / 2]
+  } else {
+    return s[Math.round(s.length / 2 - 1)];
+  }
+}
+*/
+let t1 = "abrtoplm";
+console.log(getMiddle(t1));
 /*
 ******************* Are the numbers in order? ********************************
 */
