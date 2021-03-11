@@ -1,4 +1,59 @@
 /*
+************************* ToLeetSpeak ****************************
+*/
+let toLeet = {
+  A : '@',
+  B : '8',
+  C : '(',
+  D : 'D',
+  E : '3',
+  F : 'F',
+  G : '6',
+  H : '#',
+  I : '!',
+  J : 'J',
+  K : 'K',
+  L : '1',
+  M : 'M',
+  N : 'N',
+  O : '0',
+  P : 'P',
+  Q : 'Q',
+  R : 'R',
+  S : '$',
+  T : '7',
+  U : 'U',
+  V : 'V',
+  W : 'W',
+  X : 'X',
+  Y : 'Y',
+  Z : '2',
+  " ": " "
+};
+
+function toLeetSpeak(str) {
+  let strArr = str.split("");
+  let leetArr = [];
+  let leetMe = function(letter) {
+    leetArr.push(toLeet[letter]);
+  }
+  strArr.forEach(leetMe);
+  return leetArr.join("");
+};
+
+let t1 = "CODEWARS UP"
+console.log(toLeetSpeak(t1)); // "0D3W@R$";
+/*
+let test = [1, 2];
+test[1] = "works";
+console.log(test);*/
+
+
+
+
+
+
+/*
 *************************** Chinese Zodiac ***********************
 The Chinese zodiac is a repeating cycle of 12 years, with each year
 being represented by an animal and its reputed attributes. The lunar calendar
