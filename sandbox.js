@@ -1,4 +1,26 @@
 /*
+********************** Product of Largest Pair *******************
+*/
+function maxProduct(a) {
+  let max = Math.max(...a)
+  a.splice(a.indexOf(max), 1);
+  return Math.max(...a) * max;
+}
+let t1 = [134, 320, 266, 299, 89, 234];//--> 95680
+console.log(maxProduct(t1));
+
+
+let t1 = [134, 320, 266, 299, 89, 234];//--> 95680
+console.log(t1.indexOf(320));
+t1.splice(t1.indexOf(320), 1)
+console.log(t1);
+
+
+
+
+
+
+/*
 ************************* ToLeetSpeak ****************************
 */
 let toLeet = {
